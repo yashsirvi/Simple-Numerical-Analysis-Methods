@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-n, m = map(int, input("n, m: ").split())    # input in rows and columns
+n, m = map(int, input("n, m: ").split())
 iterations = int(input("Number of iterations: "))
 print("Rows of Coefficient Matrix:")
 array = np.array([input().strip().split() for _ in range(n)], int)
