@@ -20,8 +20,11 @@ iter = []
 for i in range(iterations):
     x = G @ x + H
     r = array@x -b
-    residue.append(np.linalg.norm(r, ord="fro"))
+    normr = np.linalg.norm(r, ord="fro")
+    residue.append(normr)
     iter.append(i+1)
+    if normr < 1e-10:
+        break
 plt.style.use('fivethirtyeight')
 plt.plot(iter, residue)
 plt.show()
