@@ -8,7 +8,7 @@ array = np.array([input().strip().split() for _ in range(n)], int)
 print("Answers to equations: ")
 b = np.array([input().strip().split() for _ in range(n)], int)
 print("Initial Guess: ")
-x = np.array([input().strip().split() for _ in range(n)], int)
+x = np.array([input().strip().split() for _ in range(n)], float)
 D = np.diag(np.diag(array))
 L = np.tril(array)-D
 U = np.triu(array)-D
@@ -23,6 +23,7 @@ for i in range(iterations):
     normr = np.linalg.norm(r, ord="fro")
     residue.append(normr)
     iter.append(i+1)
+    print(f"Iteration {i+1}: x = {x[0][0]}\t y = {x[1][0]}\t z = {x[2][0]}")
     if normr < 1e-10:
         break
 plt.style.use('fivethirtyeight')

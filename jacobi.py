@@ -4,11 +4,11 @@ import matplotlib.pyplot as plt
 n, m = map(int, input("n, m: ").split())
 iterations = int(input("Number of iterations: "))
 print("Rows of Coefficient Matrix:")
-array = np.array([input().strip().split() for _ in range(n)], int)
+array = np.array([input().strip().split() for _ in range(n)], float)
 print("Answers to equations: ")
-b = np.array([input().strip().split() for _ in range(n)], int)
+b = np.array([input().strip().split() for _ in range(n)], float)
 print("Initial Guess: ")
-x = np.array([input().strip().split() for _ in range(n)], int)
+x = np.array([input().strip().split() for _ in range(n)], float)
 D = np.diag(np.diag(array))
 L = np.tril(array)-D
 U = np.triu(array)-D
