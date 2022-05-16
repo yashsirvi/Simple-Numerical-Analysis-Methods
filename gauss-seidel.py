@@ -23,7 +23,7 @@ for i in range(iterations):
     normr = np.linalg.norm(r, ord="fro")
     residue.append(normr)
     iter.append(i+1)
-    print(f"Iteration {i+1}: x = {x[0][0]}\t y = {x[1][0]}\t z = {x[2][0]}")
+    print(f"Iteration {i+1}: {x.T}")
     if normr < 1e-10:
         break
 plt.style.use('fivethirtyeight')
