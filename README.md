@@ -4,6 +4,6 @@ Python implementation of numerical analysis methods taught in **MA11004**-Spring
 
 ### **Example**:
 <figure>
-<img src="./gifs/bisection.gif">
+<img src="./gifs/bisection.gif" align=center>
 <figcaption align=center>Bisection Method</figcaption>
 </figure>
